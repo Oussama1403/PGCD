@@ -1,0 +1,28 @@
+PROGRAM PRINCIPALE
+DÉBUT
+    ECRIRE("Saisire le premier nombre :")
+    LIRE(n1)
+    ECRIRE("Saisire le deuxième nombre :)
+    LIRE(n2)
+    r = PGCD(n1,n2)
+    ECRIRE("le PGCD de",n1,"et",n2,"est",r)
+FIN
+
+D.O.G
+|  Objet   |   Type   |
+| n1       | entier   |
+| n2       | entier   |
+| r        | entier   |
+| PGCD     | fonction |
+
+Algorithme: PGCD
+
+fonction PGCD(@n1,n2:entier):entier
+DÉBUT
+    SI n1 > n2 alors:
+        retourner PGCD(n1-n2,n2)
+    SI NON SI n2 > n1 alors:
+        retourner PGCD(n1,n2-n1)
+    SI NON alors:
+        retourner n1         
+FIN        
