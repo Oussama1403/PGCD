@@ -13,6 +13,7 @@ class MyWindow(QtWidgets.QMainWindow,Ui_MainWindow):
     
     def CalculatePGCD(self):
         self.statusbar.showMessage("")
+        self.textEdit.setText("")
         Num1 = int(self.first_num.text())
         Num2 = int(self.second_num.text())
         if Num1 > 0 and Num2 > 0:
